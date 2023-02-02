@@ -6,7 +6,7 @@ function Nutraceuticals() {
     const btnpressprev = () => {
        var width = box.clientWidth;
         box.scrollLeft = box.scrollLeft - width;
-         
+         console.log(width,box,"data")
     }
     const btnpressnext = () => {
         var width = box.clientWidth;
@@ -22,8 +22,8 @@ function Nutraceuticals() {
       </ul>
 
        <div className='product-caraousel'>
-        <button className='pre-btn' onClick={btnpressprev}><p>&lt;</p></button>
-        <button className='next-btn' onClick={btnpressnext}><p>&gt;</p></button>
+        <button className='pre-btn' onClick={(e)=>btnpressprev()}><p>&lt;</p></button>
+        <button className='next-btn' onClick={(e)=>btnpressnext()}><p>&gt;</p></button>
 
           <div className='product-container'>
              <Nutracard/>
